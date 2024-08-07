@@ -1,0 +1,10 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+}
+
+.services h1 {
+  margin-bottom: 32px;
+}
