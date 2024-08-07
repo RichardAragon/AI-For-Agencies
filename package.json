@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "^4.0.3"
+    "react": "*",
+    "react-dom": "*",
+    "react-scripts": "*"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -11,3 +11,4 @@
     "eject": "react-scripts eject"
   }
 }
+
