@@ -1,30 +1,30 @@
 import React from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 
 const ServiceCard = ({ title, items }) => (
-  <Card className="w-full max-w-md mx-auto my-4">
-    <CardHeader>
-      <CardTitle>{title}</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <ul className="space-y-2">
+  <div className="bg-white shadow-md rounded-lg overflow-hidden w-full max-w-md mx-auto my-4">
+    <div className="px-4 py-5 sm:px-6">
+      <h3 className="text-lg leading-6 font-medium text-gray-900">{title}</h3>
+    </div>
+    <div className="border-t border-gray-200">
+      <ul className="divide-y divide-gray-200">
         {items.map((item, index) => (
-          <li key={index} className="flex items-start">
-            <Badge variant="outline" className="mr-2 mt-1">{item.price}</Badge>
-            <div>
-              <h4 className="font-semibold">{item.name}</h4>
-              <ul className="list-disc list-inside pl-4">
-                {item.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="text-sm">{feature}</li>
-                ))}
-              </ul>
+          <li key={index} className="px-4 py-4 sm:px-6">
+            <div className="flex items-center justify-between">
+              <h4 className="text-sm font-medium text-indigo-600">{item.name}</h4>
+              <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                {item.price}
+              </span>
             </div>
+            <ul className="mt-2 text-sm text-gray-500 list-disc list-inside">
+              {item.features.map((feature, fIndex) => (
+                <li key={fIndex}>{feature}</li>
+              ))}
+            </ul>
           </li>
         ))}
       </ul>
-    </CardContent>
-  </Card>
+    </div>
+  </div>
 );
 
 export default ServiceCard;
